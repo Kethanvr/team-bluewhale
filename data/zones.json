@@ -1,0 +1,193 @@
+{
+  "zones": [
+    {
+      "id": "panambur",
+      "name": "Panambur Beach",
+      "district": "Mangalore",
+      "coords": [12.9141, 74.8560],
+      "status": "CRITICAL",
+      "ecosystemScore": 38,
+      "indicators": {
+        "dissolvedOxygen": 1.8,
+        "doUnit": "mg/L",
+        "doStatus": "HYPOXIC",
+        "msaIndex": 31,
+        "msaStatus": "CRITICAL",
+        "fishingPressure": "HIGH",
+        "fishingMortality": 0.43,
+        "msy": 0.31,
+        "sstAnomaly": 1.4,
+        "sstUnit": "°C above baseline",
+        "pollutionDensity": 7.2
+      },
+      "regimeShiftProbability": 73,
+      "monthsToThreshold": 14,
+      "trophicRisk": "HIGH",
+      "species": ["olive-ridley", "whale-shark", "indian-mackerel"],
+      "pollutionSources": [
+        { "name": "MRPL Refinery", "distance": "12km N", "type": "Chemical discharge" },
+        { "name": "New Mangalore Port", "distance": "3km N", "type": "Ballast water + oil" },
+        { "name": "Netravathi River", "distance": "2km S", "type": "Agricultural runoff" }
+      ],
+      "lastReported": "2 hours ago",
+      "reportCount": 23
+    },
+    {
+      "id": "netrani",
+      "name": "Netrani Island",
+      "district": "Uttara Kannada",
+      "coords": [14.0014, 74.3311],
+      "status": "WARNING",
+      "ecosystemScore": 54,
+      "indicators": {
+        "dissolvedOxygen": 4.2,
+        "doUnit": "mg/L",
+        "doStatus": "STRESSED",
+        "msaIndex": 49,
+        "msaStatus": "WARNING",
+        "fishingPressure": "MEDIUM",
+        "fishingMortality": 0.28,
+        "msy": 0.31,
+        "sstAnomaly": 1.1,
+        "sstUnit": "°C above baseline",
+        "pollutionDensity": 4.8
+      },
+      "regimeShiftProbability": 41,
+      "monthsToThreshold": 28,
+      "trophicRisk": "MEDIUM",
+      "species": ["hawksbill-turtle", "whale-shark", "coral-grouper"],
+      "pollutionSources": [
+        { "name": "Bhatkal Fishing Harbor", "distance": "14km E", "type": "Fish processing waste" },
+        { "name": "Sharavathi River", "distance": "20km S", "type": "Industrial effluents" }
+      ],
+      "lastReported": "6 hours ago",
+      "reportCount": 8,
+      "note": "Karnataka's only significant coral reef — 35% coral cover remaining (down from 70% in 1990)"
+    },
+    {
+      "id": "malpe",
+      "name": "Malpe Harbor",
+      "district": "Udupi",
+      "coords": [13.3522, 74.7051],
+      "status": "WARNING",
+      "ecosystemScore": 51,
+      "indicators": {
+        "dissolvedOxygen": 3.9,
+        "doUnit": "mg/L",
+        "doStatus": "STRESSED",
+        "msaIndex": 44,
+        "msaStatus": "WARNING",
+        "fishingPressure": "HIGH",
+        "fishingMortality": 0.51,
+        "msy": 0.31,
+        "sstAnomaly": 0.9,
+        "sstUnit": "°C above baseline",
+        "pollutionDensity": 5.9
+      },
+      "regimeShiftProbability": 48,
+      "monthsToThreshold": 22,
+      "trophicRisk": "MEDIUM",
+      "species": ["olive-ridley", "indian-mackerel", "penaeid-shrimp"],
+      "pollutionSources": [
+        { "name": "Malpe Fishing Harbor", "distance": "0.5km", "type": "Fish waste + plastic nets" },
+        { "name": "Sauparnika River", "distance": "3km N", "type": "Urban sewage" }
+      ],
+      "lastReported": "1 hour ago",
+      "reportCount": 31,
+      "note": "Largest fishing harbor in Karnataka — 5000+ registered boats"
+    },
+    {
+      "id": "sasihithlu",
+      "name": "Sasihithlu Beach",
+      "district": "Dakshina Kannada",
+      "coords": [13.0641, 74.7891],
+      "status": "CRITICAL",
+      "ecosystemScore": 29,
+      "indicators": {
+        "dissolvedOxygen": 1.4,
+        "doUnit": "mg/L",
+        "doStatus": "DEAD ZONE",
+        "msaIndex": 24,
+        "msaStatus": "CRITICAL",
+        "fishingPressure": "HIGH",
+        "fishingMortality": 0.58,
+        "msy": 0.31,
+        "sstAnomaly": 1.7,
+        "sstUnit": "°C above baseline",
+        "pollutionDensity": 8.1
+      },
+      "regimeShiftProbability": 84,
+      "monthsToThreshold": 7,
+      "trophicRisk": "CRITICAL",
+      "species": ["olive-ridley", "dugong", "sea-cucumber"],
+      "pollutionSources": [
+        { "name": "MRPL Refinery pipeline", "distance": "8km N", "type": "Chemical + thermal discharge" },
+        { "name": "Gurpur River", "distance": "1km", "type": "Heavy metal runoff" }
+      ],
+      "lastReported": "30 min ago",
+      "reportCount": 47,
+      "note": "Primary Olive Ridley nesting site in Karnataka — 8 nesting sites lost since 2010"
+    },
+    {
+      "id": "gokarna",
+      "name": "Gokarna Coast",
+      "district": "Uttara Kannada",
+      "coords": [14.5479, 74.3188],
+      "status": "STABLE",
+      "ecosystemScore": 71,
+      "indicators": {
+        "dissolvedOxygen": 6.8,
+        "doUnit": "mg/L",
+        "doStatus": "HEALTHY",
+        "msaIndex": 68,
+        "msaStatus": "STABLE",
+        "fishingPressure": "LOW",
+        "fishingMortality": 0.18,
+        "msy": 0.31,
+        "sstAnomaly": 0.4,
+        "sstUnit": "°C above baseline",
+        "pollutionDensity": 2.1
+      },
+      "regimeShiftProbability": 12,
+      "monthsToThreshold": 60,
+      "trophicRisk": "LOW",
+      "species": ["whale-shark", "hawksbill-turtle", "spinner-dolphin"],
+      "pollutionSources": [
+        { "name": "Tourism waste", "distance": "beach", "type": "Plastic litter (seasonal)" }
+      ],
+      "lastReported": "12 hours ago",
+      "reportCount": 4
+    },
+    {
+      "id": "kundapura",
+      "name": "Kundapura Coast",
+      "district": "Udupi",
+      "coords": [13.6298, 74.6888],
+      "status": "CRITICAL",
+      "ecosystemScore": 33,
+      "indicators": {
+        "dissolvedOxygen": 2.1,
+        "doUnit": "mg/L",
+        "doStatus": "HYPOXIC",
+        "msaIndex": 29,
+        "msaStatus": "CRITICAL",
+        "fishingPressure": "HIGH",
+        "fishingMortality": 0.61,
+        "msy": 0.31,
+        "sstAnomaly": 1.5,
+        "sstUnit": "°C above baseline",
+        "pollutionDensity": 7.6
+      },
+      "regimeShiftProbability": 79,
+      "monthsToThreshold": 9,
+      "trophicRisk": "CRITICAL",
+      "species": ["olive-ridley", "dugong", "penaeid-shrimp"],
+      "pollutionSources": [
+        { "name": "Sauparnika-Chakra confluence", "distance": "2km", "type": "Agricultural + industrial" },
+        { "name": "Kundapura Port", "distance": "1km", "type": "Diesel spills" }
+      ],
+      "lastReported": "45 min ago",
+      "reportCount": 38
+    }
+  ]
+}
