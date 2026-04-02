@@ -64,26 +64,6 @@ function RevealSection({ children, delay = 0 }: { children: React.ReactNode; del
 }
 
 export default function HomePage() {
-  // Custom cursor
-  const cursorRef = useRef<HTMLDivElement>(null);
-  const ringRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    let rx = 0, ry = 0, mx = 0, my = 0;
-    const onMove = (e: MouseEvent) => {
-      mx = e.clientX; my = e.clientY;
-      if (cursorRef.current) { cursorRef.current.style.left = mx + 'px'; cursorRef.current.style.top = my + 'px'; }
-    };
-    document.addEventListener('mousemove', onMove);
-    let id: number;
-    const animRing = () => {
-      rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
-      if (ringRef.current) { ringRef.current.style.left = rx + 'px'; ringRef.current.style.top = ry + 'px'; }
-      id = requestAnimationFrame(animRing);
-    };
-    id = requestAnimationFrame(animRing);
-    return () => { document.removeEventListener('mousemove', onMove); cancelAnimationFrame(id); };
-  }, []);
 
   const problems = [
     { icon: '🌊', title: 'Trophic Cascade Risk', color: 'var(--glow)', desc: 'Overfishing removes apex predators → mesopredator explosion → prey collapse. Karnataka lost 67% of Whale Shark sightings in 5 years. Cascade already in progress.', badge: '73% regime shift probability', badgeColor: 'var(--critical)' },
@@ -106,10 +86,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Custom cursor */}
-      <div ref={cursorRef} style={{ position: 'fixed', width: 12, height: 12, background: 'var(--glow)', borderRadius: '50%', pointerEvents: 'none', zIndex: 9999, transform: 'translate(-50%,-50%)', boxShadow: '0 0 20px var(--glow)', transition: 'width 0.3s, height 0.3s' }} />
-      <div ref={ringRef} style={{ position: 'fixed', width: 36, height: 36, border: '1px solid rgba(0,212,255,0.4)', borderRadius: '50%', pointerEvents: 'none', zIndex: 9998, transform: 'translate(-50%,-50%)', transition: 'width 0.3s, height 0.3s' }} />
-
       {/* Scanline */}
       <div style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: 2, background: 'linear-gradient(90deg,transparent,var(--glow),transparent)', opacity: 0.3, zIndex: 10, pointerEvents: 'none' }} className="animate-scan" />
 
