@@ -75,9 +75,64 @@ export async function analyzePollution(
           },
         ],
         generationConfig: {
-          temperature: 0.1,
-          maxOutputTokens: 1500,
           responseMimeType: "application/json",
+          responseSchema: {
+            type: "OBJECT",
+            properties: {
+              pollutionDetected: { type: "BOOLEAN" },
+              pollutionType: {
+                type: "OBJECT",
+                properties: {
+                  primary: { type: "STRING" },
+                  secondary: { type: "STRING" },
+                  marpolCategory: { type: "STRING" }
+                }
+              },
+              severityScore: { type: "NUMBER" },
+              affectedAreaEstimate: { type: "STRING" },
+              dissolvedOxygenImpact: {
+                type: "OBJECT",
+                properties: {
+                  estimatedDODrop: { type: "STRING" },
+                  impactRadius: { type: "STRING" },
+                  hypoxiaRisk: { type: "STRING" }
+                }
+              },
+              trophicThreat: {
+                type: "OBJECT",
+                properties: {
+                  seagrassRisk: { type: "STRING" },
+                  benthicHabitatImpact: { type: "STRING" },
+                  algalBloomRisk: { type: "STRING" },
+                  cascadeRisk: { type: "STRING" }
+                }
+              },
+              speciesAtRisk: {
+                type: "ARRAY",
+                items: {
+                  type: "OBJECT",
+                  properties: {
+                    species: { type: "STRING" },
+                    reason: { type: "STRING" }
+                  }
+                }
+              },
+              recommendedActions: {
+                type: "ARRAY",
+                items: { type: "STRING" }
+              },
+              alertEscalation: {
+                type: "OBJECT",
+                properties: {
+                  shouldAlert: { type: "BOOLEAN" },
+                  alertTarget: { type: "STRING" },
+                  urgency: { type: "STRING" }
+                }
+              },
+              confidence: { type: "NUMBER" },
+              analysisNotes: { type: "STRING" }
+            }
+          }
         },
       }),
     }
