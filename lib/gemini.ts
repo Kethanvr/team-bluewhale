@@ -77,6 +77,7 @@ export async function analyzePollution(
         generationConfig: {
           temperature: 0.1,
           maxOutputTokens: 1500,
+          responseMimeType: "application/json",
         },
       }),
     }
@@ -95,5 +96,10 @@ export async function analyzePollution(
     .replace(/```\n?/g, '')
     .trim();
 
-  return JSON.parse(cleaned) as PollutionAnalysis;
+  try {
+    return JSON.parse(cleaned) as PollutionAnalysis;
+  } catch (err) {
+    console.error('Failed to parse Gemini response:', text);
+    throw new Error('Invalid JSON received from Gemini: ' + String(err));
+  }
 }
