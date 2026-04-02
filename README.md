@@ -1,6 +1,6 @@
 # BlueWhale: Marine Trophic Collapse Early Warning System
 
-![BlueWhale Preview](/Screenshot%20from%202026-04-02%2009-48-28.png)
+![BlueWhale Preview](public/Screenshot%20from%202026-04-02%2009-48-28.png)
 
 **BlueWhale** is a full-stack Next.js application built for the **BGSCET 2025 Hackathon**. It monitors 5 IUCN-aligned ecosystem indicators across Karnataka's 320km coastline, computing real-time regime shift probability before an irreversible trophic collapse occurs.
 
