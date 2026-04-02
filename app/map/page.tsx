@@ -98,7 +98,7 @@ export default function MapPage() {
         </div>
 
         {/* Map layout */}
-        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 360px', overflow: 'hidden' }}>
+        <div style={{ flex: 1, display: 'grid', gridTemplateColumns: '1fr 1fr', overflow: 'hidden' }}>
           {/* Map column */}
           <div style={{ position: 'relative', overflow: 'hidden' }}>
             <OceanMap
