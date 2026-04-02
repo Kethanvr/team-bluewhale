@@ -7,7 +7,8 @@ import { Zone } from '@/lib/types';
 import { computeEcosystemScore, scoreToColor } from '@/lib/ecosystem-score';
 import zonesRaw from '@/data/zones.json';
 
-const zones = (zonesRaw as unknown as { zones: Zone[] }).zones;
+const _raw: any = zonesRaw;
+const zones: Zone[] = Array.isArray(_raw?.zones) ? _raw.zones : (Array.isArray(_raw?.default?.zones) ? _raw.default.zones : (Array.isArray(_raw) ? _raw : []));
 
 const OceanMap = dynamic(() => import('@/components/map/OceanMap'), {
   ssr: false,
